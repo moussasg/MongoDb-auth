@@ -1,0 +1,11 @@
+.table{
+    display: flex;
+    gap: 1px;
+  }
+  td{
+    border: 2px solid black;
+  }
+  .carprix {
+    display: flex;
+    flex-direction: column;
+  }
