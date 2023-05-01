@@ -12,7 +12,7 @@ class UserForm extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const { name, email, password } = this.state; /// comunikit react-node avec lien node li howa http://localhost:4000
-    axios.post('http://localhost:4000/api/users/', { name, email, password }) // hna n7aAT LIEN NODE__ li moraha standard/api/users/
+    axios.post('http://localhost:3001/api/users/', { name, email, password }) // hna n7aAT LIEN NODE__ li moraha standard/api/users/
       .then((response) => {
         console.log(response.data);
         // mettre à jour l'état local du composant après la soumission du formulaire
