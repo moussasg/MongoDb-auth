@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import * as mdb from 'mdb-ui-kit';
+import { MesSmartphones } from './constant/toutemarque'; // constante de tout mon magasin
 import Signin from './pages/signin/Signin';
 import Home from './pages/home/home';
 import { Link, Route, Routes } from 'react-router-dom';
 import Products from './pages/store/nproducts';
 import Card from './components/article/index';
-import { MesSmartphones } from './constant/toutemarque';
 import logohydra from '../src/assets/hydra smartphones.jpg';
 function App() {
   return (

@@ -7,8 +7,8 @@ import huita from "../assets/8a.png" //
 import neufa from "../assets/9a.jpg"
 import treize from "../assets/13.jpeg"
 import qautorze from "../assets/14.jpg"
-import ssv1 from "../assets/s21.jpeg"
-import ssv2 from "../assets/S22.jpeg"
+import ultra from "../assets/s21.jpeg"
+import ultra2 from "../assets/S22.jpeg"
 export const MesSmartphones = [
     { //////////////
       id: 1,
@@ -58,14 +58,14 @@ export const MesSmartphones = [
       produits:[
         {
           marque :"Smasung",
-          imgp: ssv1 , 
+          imgp: ultra , 
           nom:"s21" ,
           caractér: "caractéristique : Ram : 8gb" ,
           prix : "220000da" ,
           
         },
         {
-          imgp:ssv2, 
+          imgp:ultra2, 
           nom:"s22" ,
           caractér: "caractéristique : Ram : 12gb" ,
           prix : "220000da" ,

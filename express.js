@@ -7,11 +7,12 @@ import mongoose from 'mongoose'; /// driver de mongodb dans node.js pour défini
 const app = express(); /// cluster0.lnp5clj.mongodb.net nom de cluster
 app.use(bodyParser.json()); // 1Yzsk2SKlJMxbSgW c le mdp sur database atlas
 // Connect to the database // moussasouagg c le username de database sur atlas 
-mongoose.connect( process.env.Db_Connection , {
+mongoose.connect(process.env.Db_Connection, {
   useNewUrlParser: true,
 }).then(() => {
   console.log('Connected to database');
-}).catch((error) => {
+})
+.catch((error) => {
   console.log('Unable to connect to database', error);
 })
 // Define the userschema ndiroh aprés dakhel model 
@@ -74,7 +75,7 @@ app.post('/api/users', async (req, res) => { // users = collection
   });
   
 // Start the server
-app.listen(3001, () => {
+app.listen(3002, () => {
   console.log('Server started on port 3001');
 });
 ///
