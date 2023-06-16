@@ -1,15 +1,16 @@
 import dotenv from 'dotenv'
-dotenv.config()
+dotenv.config() /// fichier .env pour cahcé mdp de database
 import express from 'express'; // framework de node.js gére les requêtes et les réponses HTTP , facilite création de serveur web
-import bodyParser from 'body-parser'; //  bibliothèque middleware pour Express.js pour 
+import bodyParser from 'body-parser';//bibliothèque middleware pour Express.js pour 
 ///récupérer les données envoyées dans le corps d'une requête HTTP et le transformer en objet 
 import mongoose from 'mongoose'; /// driver de mongodb dans node.js pour définir des shémas pour faciliter les opération qui travaille avec node.js
-const app = express(); /// cluster0.lnp5clj.mongodb.net nom de cluster
-app.use(bodyParser.json()); // 1Yzsk2SKlJMxbSgW c le mdp sur database atlas
-// Connect to the database // moussasouagg c le username de database sur atlas 
-mongoose.connect(process.env.Db_Connection, {
-  useNewUrlParser: true,
-}).then(() => {
+const app = express(); 
+app.use(bodyParser.json());
+// Connect to the database 
+mongoose.connect(process.env.Dburi, {  // Dburi uri de dabatase défini dans fichier .env
+useNewUrlParser: true }
+)
+.then(() => {
   console.log('Connected to database');
 })
 .catch((error) => {
@@ -17,37 +18,36 @@ mongoose.connect(process.env.Db_Connection, {
 })
 // Define the userschema ndiroh aprés dakhel model 
 const userSchema = new mongoose.Schema({ 
-  name: String,
   email: String,
   password: String,
 });
-let User;
+let User; // User = Modéle
 User = mongoose.model('User', userSchema);
-// Route for receiving form data pour que la méthode post marche
-app.post('/api/users', async (req, res) => { // users = collection
-  const { name, email, password } = req.body;
-  try {
-    const user = new User({ name, email, password });
+// Route for receiving form data , pour insérer les données dans la collectoin
+app.post('/api/accounts', async (req, res) => { // accounts = la collection  généré automatique collection "users" dans MongoDB Atlas.
+  const { email, password } = req.body; ///  req = {l'objet} représentant la requête HTTP
+  try { // req.body pour accéder à des données envoyé dans une requette 
+    const user = new User({email, password });
     await user.save();
-    console.log(`name :  ${name} , email :${email} , password : ${password} / inserted into "users" collection with ID ${user._id}`);
+    console.log(` email :${email} , password : ${password} / inserted into "accounts" collection with ID ${user._id}`);
     res.json({ message: 'Form data saved successfully' });
   } catch (err) {
     console.log(err);
     res.status(500).send('Error inserting data into database');
   } } )
-  /// get all users
-  app.get('/api/users', async (req, res) => {
+  /// get all accounts
+  app.get('/api/accounts', async (req, res) => {
     try {
-      const users = await User.find({});
-      res.json(users);
+      const accounts = await User.find({});
+      res.json(accounts);
     } catch (error) {
       console.log(error);
-      res.status(500).send('Error getting users');
+      res.status(500).send('Error getting accounts');
     }
   });
   // Route to get specific id
-  app.get('/api/users/:id', async (req, res) => {
-    try {
+  app.get('/api/accounts/:id', async (req, res) => {
+    try { /// req.params contient les paramètres extraits de l'URL de la requête
       const user = await User.findById(req.params.id);
       if (!user) {
         res.status(404).send('User not found');
@@ -59,7 +59,7 @@ app.post('/api/users', async (req, res) => { // users = collection
       res.status(500).send('Error retrieving data from database');
     }
   });
-  app.delete('/api/users/:id', async (req, res) => {
+  app.delete('/api/accounts/:id', async (req, res) => {
     const userId = req.params.id;
     try {
       const deletedUser = await User.findByIdAndDelete(userId);
@@ -73,9 +73,8 @@ app.post('/api/users', async (req, res) => { // users = collection
       res.status(500).send('Error deleting user from database');
     }
   });
-  
 // Start the server
-app.listen(3002, () => {
+app.listen(5000, () => {
   console.log('Server started on port 3001');
 });
 ///

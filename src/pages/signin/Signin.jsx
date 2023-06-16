@@ -14,7 +14,7 @@ handleSubmit = async (event) => {//tetactiva en cliquand sur submit de form au '
 event.preventDefault(); // pour que la page ne reload pas
 //password + email rahi fel form au dessous
 const { email, password } = this.state; /// comunikit react-node avec axios li yb3te request b lien node li howa http://localhost:3002
-axios.post('http://localhost:3002/api/users/', { email, password } ) // hna n7aAT LIEN NODE 3002 port node  'api' fixe /api/ana semitha 'users' n9der nbdlha / lazm meme f express.js tredha api/users
+axios.post('http://localhost:5000/api/accounts/', { email, password } ) // hna n7aAT LIEN NODE 3002 port node  'api' fixe /api/ana semitha 'users' n9der nbdlha / lazm meme f express.js tredha api/users
     ///pour effectuer des requêtes AJAX asynchrones depuis une page web vers un serveur ( effectuées avec JavaScript et le format de données peut être XML, JSON, HTML ou tout autre format.)
         this.setState({ //mise à jour du composant marche sur react.componenet accepte un nouvel objet d'état en argument
           email: '',
