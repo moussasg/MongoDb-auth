@@ -1,7 +1,6 @@
 import React from 'react'
 import classe from "./index.module.css"
 import LogoAceuill from "../../assets/logos.jpg"
-import Login from '../signin/Signin';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';

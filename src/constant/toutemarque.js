@@ -19,14 +19,16 @@ export const MesSmartphones = [
           marque :"Xioami",
           imgp: huita,
           nom: "8a" ,
-          caractér: "caractéristique: Ram : 2gb " ,
+          caractér: "caractéristique: Ram : 4gb " ,
           prix : "21000da" ,
+          ram : "4gb",
         },
         {
           imgp:neufa,
           nom:"9a" ,
           caractér: "caractéristique : Ram : 2gb" ,
           prix : "22000da" ,
+          ram : "2gb",
         }
       ]
     }, //////////////
@@ -39,14 +41,16 @@ export const MesSmartphones = [
           marque :"Apple" ,
           imgp: treize ,
           nom:"13" ,
-          caractér: "caractéristique : Ram : 2gb" ,
+          caractér: "caractéristique : Ram : 6gb" ,
           prix : "220000da" ,
+          ram : "6gb",
         },
         {
           imgp: qautorze ,
           nom:"14" ,
-          caractér: "caractéristique : Ram : 2gb" ,
+          caractér: "caractéristique : Ram : 4gb" ,
           prix : "330000da" ,
+          ram : "4gb",
         }
       ]
     },
@@ -62,13 +66,14 @@ export const MesSmartphones = [
           nom:"s21" ,
           caractér: "caractéristique : Ram : 8gb" ,
           prix : "220000da" ,
-          
+          ram : "8gb",
         },
         {
           imgp:ultra2, 
           nom:"s22" ,
           caractér: "caractéristique : Ram : 12gb" ,
-          prix : "220000da" ,
+          prix : "220000da",
+          ram : "12gb",
         }
       ]
     },

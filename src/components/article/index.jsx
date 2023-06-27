@@ -1,35 +1,61 @@
-import React from "react";
-import classes from "./index.module.css"
-import { useParams } from "react-router-dom"; // hooks de react pour récupérré id de cst dans url
-import { MesSmartphones } from "../../constant/toutemarque" // notre cst
-function Card() { //Card li tafichi les produits meditelha props : notre cst f app.jsx
-  const { id } = useParams(); //  id jebto m cst MesSmartphones
+import React, { useState } from "react";
+import classes from "./index.module.css";
+import { useParams } from "react-router-dom";
+import { MesSmartphones } from "../../constant/toutemarque";
+function Card() {
+  const { id } = useParams();
   const FindId = MesSmartphones.find((el) => el.id.toString() === id);
-  // FindId yjib id de cst 
-  return (
-    <div> {/*produits jbto m cst c les produits de marque a afiché */}
-        {FindId.produits.map((el, i) => ( // produits = array de t tles marque a afiché
-          <div key={i}> 
-          <h1> {el.marque} </h1>
-          <table className={classes.table}>
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const renderSmartphones = () => {
+    const filteredSmartphones = selectedCategory
+      ? FindId.produits.filter((produit) => produit.ram === selectedCategory)
+      : FindId.produits;
+    return filteredSmartphones.map((produit, i) => (
+      <div key={i}>
+        <h1>{produit.marque}</h1>
+        <table className={classes.table}>
           <tr>
-           <td><h1>{el.nom}</h1></td>
-           </tr>
-           <tr>
-            <td><img src={el.imgp}/> </td>
-           </tr>
-           <div className={classes.carprix}>
-           <tr>
-            <td> <h1>{el.caractér} </h1></td>
-           </tr>
-           <tr>
-            <td> <h1> Prix :  
-              {el.prix}  </h1></td>
-           </tr>
+            <td>
+              <h1>{produit.nom}</h1>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src={produit.imgp} />
+            </td>
+          </tr>
+          <div className={classes.carprix}>
+            <tr>
+              <td>
+                <h1>{produit.caractér}</h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h1>Prix : {produit.prix}</h1>
+              </td>
+            </tr>
           </div>
-            </table>
-          </div>
-        ))}
+        </table>
+      </div>
+    ));
+  };
+  return (
+    <div>
+      <select
+        value={selectedCategory}
+        onChange={(e) => setSelectedCategory(e.target.value)}
+      >
+        <option value="">RAM</option>
+        {[...new Set(FindId.produits.map((produit) => produit.ram))].map(
+          (ram) => (
+            <option key={ram} value={ram}>
+              {ram}
+            </option>
+          )
+        )}
+      </select>
+      {renderSmartphones()}
     </div>
   );
 }
