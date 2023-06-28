@@ -11,6 +11,11 @@ import logohydra from '../src/assets/hydra smartphones.jpg';
 function App() {
   return (
     <>
+    <div className='res'>
+    <a href='https://www.facebook.com/'> facebook</a>
+    <a href=''> instagram</a>
+    <a href=''> tiktok</a>
+    </div>
       <nav className="nav">
         <div className="logpg">
           <img src={logohydra} alt="Hydra smartphones logo" />

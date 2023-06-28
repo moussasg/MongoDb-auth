@@ -48,4 +48,10 @@ h1 {
 body {
   background-color: yellow;
 }
+.res {
+  background-color: rgb(217, 153, 176);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
