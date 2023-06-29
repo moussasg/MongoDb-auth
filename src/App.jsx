@@ -12,15 +12,15 @@ function App() {
   return (
     <>
     <div className='res'>
-    <a href='https://www.facebook.com/'> facebook</a>
+      <div className='cont'>
+    <h4> Contacté Nous sur : </h4>
+    </div>
+    <a href='/'> facebook</a>
     <a href=''> instagram</a>
     <a href=''> tiktok</a>
     </div>
       <nav className="nav">
-        <div className="logpg">
-          <img src={logohydra} alt="Hydra smartphones logo" />
-        </div>
-        <Link to="/">Home</Link>
+        <button><Link to="/">Home</Link></button>
         <Link to="/Products">Products</Link>
         <Link to="/Signin">Sign in</Link>
         <Link to="/Signup"> Sign Up</Link>

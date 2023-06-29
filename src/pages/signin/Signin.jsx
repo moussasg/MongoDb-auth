@@ -15,7 +15,6 @@ function SignIn() {
       });
       if (response.data.exists) {
         setMessage("L'utilisateur existe dans la base de données !");
-      } else {
         setMessage("L'utilisateur n'existe pas dans la base de données !");
       }
     } // fin de try

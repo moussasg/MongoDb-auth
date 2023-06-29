@@ -22,6 +22,7 @@ export const MesSmartphones = [
           caractér: "caractéristique: Ram : 4gb " ,
           prix : "21000da" ,
           ram : "4gb",
+          gb:"64gb",
         },
         {
           imgp:neufa,
@@ -29,6 +30,7 @@ export const MesSmartphones = [
           caractér: "caractéristique : Ram : 2gb" ,
           prix : "22000da" ,
           ram : "2gb",
+          gb:"32gb",
         }
       ]
     }, //////////////
@@ -44,6 +46,7 @@ export const MesSmartphones = [
           caractér: "caractéristique : Ram : 6gb" ,
           prix : "220000da" ,
           ram : "6gb",
+          gb:"32gb",
         },
         {
           imgp: qautorze ,
@@ -51,6 +54,7 @@ export const MesSmartphones = [
           caractér: "caractéristique : Ram : 4gb" ,
           prix : "330000da" ,
           ram : "4gb",
+          gb:"64gb",
         }
       ]
     },
@@ -67,6 +71,7 @@ export const MesSmartphones = [
           caractér: "caractéristique : Ram : 8gb" ,
           prix : "220000da" ,
           ram : "8gb",
+          gb:"128gb",
         },
         {
           imgp:ultra2, 
@@ -74,6 +79,7 @@ export const MesSmartphones = [
           caractér: "caractéristique : Ram : 12gb" ,
           prix : "220000da",
           ram : "12gb",
+          gb:"256gb",
         }
       ]
     },
@@ -100,7 +106,8 @@ export const MesSmartphones = [
       produits: [
         {
           marque :"Oppo" ,
-          imgp: huita
+          imgp: huita,
+          gb:"256gb",
         },
         {
           imgp: huita
