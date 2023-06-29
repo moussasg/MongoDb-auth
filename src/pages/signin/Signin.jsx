@@ -1,13 +1,15 @@
 import React , { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 function SignIn() {
+  const navigate = useNavigate(); /// trés trés trés importants
   const [email , setEmail] = useState(''); // email ykone vide aprés drto f value de input de email / value={email}
   const [password , setPassword] = useState('');//password ykone vide aprés drto f value de input de password / value={password}
   const [message , setMessage] = useState('');//message ykone vide aprés yetaficha avant le form
   const handleSubmit = async (event) => { //lazm const psq ni dayerha sans this de classe react rani fel fucntion
     event.preventDefault()
     try { // 1/try{} , 2/catch(error){}
-      const response = await axios.get('http://localhost:3001/api/users/', { // get psq signin , nvérifi si'il existe
+      const response = await axios.get('http://localhost:3002/api/users/', { // get psq signin , nvérifi si'il existe
         params:{ // params fixe prédifinie de react  je vais essayer de les mettre aprés virgule au dessus
           email,
           password,
@@ -15,7 +17,7 @@ function SignIn() {
       });
       if (response.data.exists) {
         setMessage("L'utilisateur existe dans la base de données !");
-        setMessage("L'utilisateur n'existe pas dans la base de données !");
+        navigate('/Products') // Products seulement mot clé aprés http://localhost:5173/ qui il dérige vers componenets Nproducts.jsx
       }
     } // fin de try
      catch (error) {

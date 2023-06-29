@@ -33,6 +33,7 @@ function Card() {
       return <h2>Il n'existe pas de modèle correspondant aux filtres sélectionnés. </h2>;
     }
     return filteredSmartphones.map((el, i) => ( 
+      <div className={classes.tout}>
       <div key={i}>
         <h1>{el.marque}</h1>
         <table className={classes.table}>
@@ -40,6 +41,7 @@ function Card() {
             <tr>
               <td>
                 <h1>{el.nom}</h1>
+                <button> {el.Ajouté} </button>
               </td>
             </tr>
             <tr>
@@ -60,10 +62,15 @@ function Card() {
           </tbody>
         </table>
       </div>
+      </div>
     ));
   };
   return (
-    <> {/* selectram + setselectram utilisé f usestate au dessus*/ }
+    <> 
+<div className="filtre">
+<button> mon panier</button>
+    <p>filtré par </p>
+</div>{/* selectram + setselectram utilisé f usestate au dessus*/ }
         <select value={selectram} onChange={(e) => setselectram(e.target.value)}> 
           <option value="">RAM</option>
           {[...new Set(FindId.produits.map((el) => el.ram))].map((ram) => (// dkhelte dakehl produits mapite 3la ram ram key utilisé

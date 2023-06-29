@@ -52,6 +52,6 @@ app.use((req, res, next) => { // A C A O
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
 }); //5) port 
-app.listen(3001, () => {
-  console.log('Server started on port 3001');
+app.listen(3002, () => {
+  console.log('Server started on port 3002');
 });

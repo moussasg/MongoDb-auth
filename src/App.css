@@ -48,10 +48,9 @@ body {
   background-color: rgb(243, 239, 240);
   display: flex;
   gap: 20px;
-  align-content: flex-start;
   justify-content: space-evenly;
 }
 .cont {
-  background-color: blue;
+  background-color: yellow;
 }
 

@@ -9,6 +9,7 @@ import treize from "../assets/13.jpeg"
 import qautorze from "../assets/14.jpg"
 import ultra from "../assets/s21.jpeg"
 import ultra2 from "../assets/S22.jpeg"
+import Pan from "../assets/pan.jpeg"
 export const MesSmartphones = [
     { //////////////
       id: 1,
@@ -23,6 +24,7 @@ export const MesSmartphones = [
           prix : "21000da" ,
           ram : "4gb",
           gb:"64gb",
+          Ajouté:"Ajouté au panier" , image:Pan,
         },
         {
           imgp:neufa,
@@ -31,6 +33,7 @@ export const MesSmartphones = [
           prix : "22000da" ,
           ram : "2gb",
           gb:"32gb",
+          Ajouté:"Ajouté au panier",image:Pan,
         }
       ]
     }, //////////////
@@ -47,6 +50,7 @@ export const MesSmartphones = [
           prix : "220000da" ,
           ram : "6gb",
           gb:"32gb",
+          Ajouté:"Ajouté au panier",image:Pan,
         },
         {
           imgp: qautorze ,
@@ -55,6 +59,8 @@ export const MesSmartphones = [
           prix : "330000da" ,
           ram : "4gb",
           gb:"64gb",
+          Ajouté:"Ajouté au panier",image:Pan,
+
         }
       ]
     },
@@ -72,6 +78,8 @@ export const MesSmartphones = [
           prix : "220000da" ,
           ram : "8gb",
           gb:"128gb",
+          Ajouté:"Ajouté au panier",image:Pan,
+
         },
         {
           imgp:ultra2, 
@@ -80,6 +88,7 @@ export const MesSmartphones = [
           prix : "220000da",
           ram : "12gb",
           gb:"256gb",
+          Ajouté:"Ajouté au panier",
         }
       ]
     },
@@ -91,10 +100,13 @@ export const MesSmartphones = [
       produits:[
         {
           marque :"Realme" ,
-          imgp: huita
+          imgp: huita,
+          Ajouté:"Ajouté au panier",
+
         },
         {
-          imgp: huita
+          imgp: huita,
+          Ajouté:"Ajouté au panier",
         }
       ]
     },
@@ -108,9 +120,13 @@ export const MesSmartphones = [
           marque :"Oppo" ,
           imgp: huita,
           gb:"256gb",
+          Ajouté:"Ajouté au panier" ,
+
         },
         {
-          imgp: huita
+          imgp: huita,
+          Ajouté:"Ajouté au panier",
+
         }
       ]
     }
