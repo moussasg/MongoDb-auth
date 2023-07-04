@@ -16,7 +16,6 @@ function SignIn() {
         },
       });
       if (response.data.exists) {
-        setMessage("L'utilisateur existe dans la base de données !");
         navigate('/Products') // Products seulement mot clé aprés http://localhost:5173/ qui il dérige vers componenets Nproducts.jsx
       }
     } // fin de try

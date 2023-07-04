@@ -11,5 +11,22 @@
   }
   .tout {
     display: flex;
+    flex-direction: row-reverse;
   }
+  .adroite {
+    display: flex;
+    justify-content: flex-end
+    }
+    .nbrprod {
+      display: flex;
+    }
+    .gros {
+      display: flex;
+    }
+    .marque {
+      display: flex;
+    }
+    .xiaomi {
+      display: flex;
+    }
   
