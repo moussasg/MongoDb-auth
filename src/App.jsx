@@ -15,10 +15,11 @@ function App() {
       <div className='cont'>
     <h4> Contacté Nous sur : </h4>
     </div>
-    <a href='/'> facebook</a>
-    <a href=''> instagram</a>
-    <a href=''> tiktok</a>
+    <a href='/'> Facebook</a>
+    <a href=''> Instagram</a>
+    <a href=''> Tiktok</a>
     </div>
+    
       <nav className="nav">
         <button><Link to="/">Home</Link></button>
         <Link to="/Products">Products</Link>
